@@ -1,0 +1,15 @@
+# Copy this file as wordhound.conf and fill the missing values
+
+[Twitter]
+
+apikey=
+apisecret=
+accesstoken=
+accesstokensecret=
+
+
+[Lexengine]
+
+threshold = 8 # can try between 5 and 100. Default 8. It means that for a word to
+              # appear as anomalous it should appear $threshhold times more 
+              # frequently than it does normally

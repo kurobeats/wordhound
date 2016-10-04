@@ -1,0 +1,29 @@
+#Markov and stat anaylsis
+
+class markovStat:
+	def __init__(self):
+		self.table = {} # This has key:pair value of letter -> list of letters most probable
+	def buildMarkovChains(self, wordList):
+
+	def anaylseWord(self, word, threshold):
+		#Take word. For every time that it each letter follows the most probable word, score is 1.
+		#If the word follows the next most probable, the score is (1/(number of letters in chain) * position) in the chain
+		wordScore = 0.0		
+		for i in range(len(word)):
+			if i == 0 or i == len(word)-1:
+				continue
+			wordScore+=self.getScore(word, i)
+		wordScore = wordScore/len(word)
+		print "[-] Word \'{0}\' scored {1} (Closer to 1 is more human, smaller is less human)".format(word, 
+
+	def getScore(self, word, index):
+		currentChar = word[index]
+		nextChar = word[index+1]
+		chain = self.table.get(currentChar)
+		if (chain != None):
+			score = -1.00
+			for i in range(len(chain)):#Go through the possible characters and check to see if ours is there
+				if chain[i] == nextChar:
+					score = len(chain) - i
+					break
+			return score
