@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from __future__ import annotations
 
 import argparse
@@ -299,13 +300,13 @@ class WordhoundCrawler:
             work = work.translate(
                 str.maketrans(
                     {
-                        "ä": "ae",
-                        "ö": "oe",
-                        "ü": "ue",
-                        "ß": "ss",
-                        "Ä": "Ae",
-                        "Ö": "Oe",
-                        "Ü": "Ue",
+                        "Ã¤": "ae",
+                        "Ã¶": "oe",
+                        "Ã¼": "ue",
+                        "ÃŸ": "ss",
+                        "Ã„": "Ae",
+                        "Ã–": "Oe",
+                        "Ãœ": "Ue",
                     }
                 )
             )
@@ -703,13 +704,13 @@ def _tokenize_text(text: str, *, lowercase: bool, with_numbers: bool, convert_um
         work = work.translate(
             str.maketrans(
                 {
-                    "ä": "ae",
-                    "ö": "oe",
-                    "ü": "ue",
-                    "ß": "ss",
-                    "Ä": "Ae",
-                    "Ö": "Oe",
-                    "Ü": "Ue",
+                    "Ã¤": "ae",
+                    "Ã¶": "oe",
+                    "Ã¼": "ue",
+                    "ÃŸ": "ss",
+                    "Ã„": "Ae",
+                    "Ã–": "Oe",
+                    "Ãœ": "Ue",
                 }
             )
         )
