@@ -1,0 +1,6 @@
+requests>=2.31.0
+tldextract>=5.1.0
+beautifulsoup4>=4.12.0
+
+# Optional: enable PDF metadata extraction in --meta mode
+pypdf>=4.0.0
